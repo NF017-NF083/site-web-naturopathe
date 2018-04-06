@@ -21,7 +21,7 @@ nav , footer {
   justify-content: space-around;
   flex-direction: row;
 }
-#presentation {
+.presentation {
   width: 600px ;
   margin:auto ;
   line-height: 1.8;
@@ -35,6 +35,13 @@ table{
   background-color:#fcf5ea;
   margin:auto;
   padding:30px;
+}
+.cat{
+  margin : 20px auto ;
+  width: 600px ;
+  border : 2px solid #baa26f ;
+  border-radius : 10px ;
+
 }
 
 span {
