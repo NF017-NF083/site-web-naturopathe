@@ -1,0 +1,38 @@
+body {
+  font-family: "GeosansLight", Times, serif;
+  background-color:#fcf5de;
+  text-align:center ;
+  
+}
+
+a {
+  text-decoration:none;
+  font-size : 30px;
+  display: block;
+  color:#593a0f;
+  
+}
+a:hover {
+   text-decoration: underline;
+}
+nav , footer {
+  display:flex;
+  height: 100px;
+  justify-content: space-around;
+  flex-direction: row;
+}
+#presentation {
+  width: 600px ;
+  margin:auto ;
+  line-height: 1.8;
+  font-size: 1.5em ;
+  background-color:#fcf5ea;
+  border-radius:20px;
+  padding:30px;
+}
+
+
+@font-face {
+    font-family: "GeosansLight";
+    src: url(GeosansLight.ttf);
+}
