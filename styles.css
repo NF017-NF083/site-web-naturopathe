@@ -30,8 +30,23 @@ nav , footer {
   border-radius:20px;
   padding:30px;
 }
+table{
+  font-size: 1.5em ;
+  background-color:#fcf5ea;
+  margin:auto;
+  padding:30px;
+}
 
+span {
+  font-weight:bold ;
+}
 
+footer {
+  margin-top:30px;
+  background-color:#fcf5ea;
+  padding-top:20px;
+  
+}
 @font-face {
     font-family: "GeosansLight";
     src: url(GeosansLight.ttf);
