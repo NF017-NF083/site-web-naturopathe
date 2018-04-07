@@ -5,13 +5,20 @@ body {
   
 }
 
-a {
+a{
   text-decoration:none;
   font-size : 30px;
   display: block;
   color:#593a0f;
-  
+ 
 }
+.contact{
+  font-size : 30px;
+  color:#593a0f;
+  text-decoration:underline;
+  display:inline;
+}
+
 a:hover {
    text-decoration: underline;
 }
@@ -46,6 +53,23 @@ table{
 
 span {
   font-weight:bold ;
+}
+form {
+  text-align:left ;
+}
+label
+{
+	display: block; 
+	width: 150px;
+  float:left ;
+}
+input[type=submit]{
+  background-color:white ;
+  display: block;
+  font-size:1.1em;
+  border : 3px solid #baa26f ;
+  border-radius : 5px ;
+  margin:auto ;
 }
 
 footer {
