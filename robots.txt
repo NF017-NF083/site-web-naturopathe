@@ -1,0 +1,8 @@
+User-agent: *
+#bloque les fichiers suivant
+Disallow: /js/
+Disallow: /bdd/
+Disallow: /back_office/
+Disallow: /connexion.php
+Disallow: /mentions_legales.php
+Sitemap: adresse du site/sitemap.xml
