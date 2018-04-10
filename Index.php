@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    <a  href="index.html"><img src="img/banniere.JPG" height="250px" ></a>
-    <?php include("menu.php"); ?>
+    <a  href="index.php"><img src="img/banniere.JPG" height="250px" ></a>
+    <?php include 'menu.php'; ?>
     
     <div class="presentation">
     <img src="img/photo.JPG">
@@ -28,7 +28,7 @@ pour une pathologie particulière, n’hésitez pas à me
 contacter.</p>
     </div>
     
-    <?php include("footer.php"); ?>
+    <?php include "footer.php" ; ?>
 </body>
 
 </html>
