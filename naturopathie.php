@@ -5,14 +5,15 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
     <title>L'équilibre au naturel</title>
+    
 </head>
 
 <body>
-    <a  href="index.php"><img src="img/banniere.JPG" height="250px" ></a>
+    <a  href="index.php"><img src="img/banniere.jpg" height="250px" ></a>
     <?php include "menu.php"; ?>
     
     <div class="presentation">
-    <img src="img/naturopathie.JPG" width="300px">
+    <img src="img/naturopathie.jpg" width="300px">
     <h1>La naturopathie</h1>
     <p>La naturopathie est une médecine naturelle
 traditionnelle, complémentaire des médecines douces

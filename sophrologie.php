@@ -8,11 +8,11 @@
 </head>
 
 <body>
-    <a  href="index.php"><img src="img/banniere.JPG" height="250px" ></a>
+    <a  href="index.php"><img src="img/banniere.jpg" height="250px" ></a>
     <?php include "menu.php"; ?>
     
     <div class="presentation">
-    <img src="img/sophrologie.JPG" width="300px">
+    <img src="img/sophrologie.jpg" width="300px">
     <h1>Sophrologie caycédienne</h1>
     <p>La sophrologie utilise des techniques de relaxation
 statiques ou dynamiques, permettant le lâcher prise,

@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 
+
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
@@ -8,11 +9,11 @@
 </head>
 
 <body>
-    <a  href="index.php"><img src="img/banniere.JPG" height="250px" ></a>
+    <a  href="index.php"><img src="img/banniere.jpg" height="250px" ></a>
     <?php include 'menu.php'; ?>
     
     <div class="presentation">
-    <img src="img/photo.JPG">
+    <img src="img/photo.jpg">
     <h2>Qui suis-je ?</h2>
     <p>Cécile Gragirena , diplômée de l’IFSH, en naturopathie, conseil en
 nutrition et réfléxologie plantaire, j’ai souhaité

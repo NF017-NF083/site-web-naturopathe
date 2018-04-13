@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 
+
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
@@ -8,38 +9,25 @@
 </head>
 
 <body>
-    <a  href="index.php"><img src="img/banniere.JPG" height="250px" ></a>
+    <a  href="index.php"><img src="img/banniere.jpg" height="250px" ></a>
     <?php include "menu.php"; ?>
     
     <div class="presentation">
     
     <h1>Contactez-moi</h1>
     
-    <form method="GET" action="message.php" name="formulaire">
-    <label for "nom" >Nom et prénom</label>
-    <input type="text" name="nom" autofocus required ><br>
-    <label for "tel">Téléphone</label>
-    <input type="tel" name="tel"><br>
+    <form action="action_page.php">
+    <label for "nom">Nom</label>
+    <input type="text" name="nom" autofocus><br>
+    <label for "prenom">Prénom</label>
+    <input type="text" name="prenom"><br>
     <label for "mail">E-mail</label>
-    <input type="email" name="mail" required><br>
-    Sujet du message<br>
-
-    <input type="radio" id="demContact" name="sujet" value="demContact" checked>
-    <label for "demContact" style="display:inline; float:none;">Demande de contact</label><br>
-    <input type="radio" id="demInformation" name="sujet" value="demInformation">
-    <label for "demInformation" style="display:inline; float:none;">Demande d'information</label><br>
-    <input type="radio" id="suggAmelioration" name="sujet" value="suggAmelioration">
-    <label for "suggAmelioration" style="display:inline; float:none;">Suggestion d'amélioration</label><br>
-    
-    
+    <input type="email" name="mail"><br>
     <label for "message">Votre message</label>
-    <textarea name="message" rows=10 cols=50 required></textarea><br>
+    <textarea name="message" rows=10 cols=50></textarea><br>
     
-    <div class="boutons">
-    <input type="submit" name="send" value="Envoyer">
-    <input type="reset" name="reset" value=" Annuler ">
-    </div>
-    </form>
+  <div class="bouton"><input type="submit" value="Envoyer"></div>
+  </form>
     
     <h1>Infos pratiques</h1>
     <p>Cécile GRAGIRENA<br>
@@ -50,7 +38,7 @@
     <div>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2675.6171755815485!2d1.8665395153693098!3d47.88573867664679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e4e569c89f5ea5%3A0xe083fe6d12a272f5!2s30+Rue+Neuve%2C+45750+Saint-Pryv%C3%A9-Saint-Mesmin!5e0!3m2!1sen!2sfr!4v1523088488765" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
-    </div>
+    
     
     <?php include "footer.php"; ?>
 </body>

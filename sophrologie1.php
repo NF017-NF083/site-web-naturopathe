@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
     <title>L'équilibre au naturel</title>
-</head>
+    </head>
 
 <body>
-    <a href="index.php"><img src="img/banniere.JPG" height="250px" ></a>
+    <a href="index.php"><img src="img/banniere.jpg" height="250px" ></a>
     <?php include "menu.php"; ?>
     
     <div class="presentation">

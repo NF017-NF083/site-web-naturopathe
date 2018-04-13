@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 
+
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
@@ -8,7 +9,7 @@
 </head>
 
 <body>
-    <a href="index.php"><img src="img/banniere.JPG" height="250px" ></a>
+    <a href="index.php"><img src="img/banniere.jpg" height="250px" ></a>
     <?php include "menu.php"; ?>
     
     <table>
