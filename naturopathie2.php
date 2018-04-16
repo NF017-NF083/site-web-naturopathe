@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
     <title>L'équilibre au naturel</title>
-   
 </head>
 
 <body>
