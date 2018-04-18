@@ -6,7 +6,7 @@
 <?php
 try
 {
-  $bdd = new PDO('mysql:host=ftp.cluster020.hosting.ovh.net;dbname=naturopathie;port=21','lequilibie','AnkrGkkEqAmt');
+  $bdd = new PDO('mysql:host=lequilibiececile.mysql.db;dbname=lequilibiececile','lequilibiececile','AnkrGkkEqAmt1');;
 }
 catch(Exception $e)
 {
@@ -21,7 +21,7 @@ while ($donnees = $reponse->fetch())
   echo '<a href="mailto:$donnees[\'email\']">'.$donnees['prenom'] ."  ".$donnees['nom'].'</a>' ;
 }
 
-$reponse->close();
+$reponse->closecursor();
 
 ?>
 </p>

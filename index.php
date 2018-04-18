@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html>
 
@@ -8,6 +10,8 @@
 </head>
 
 <body>
+
+    <?php include 'bouton_connexion.php'; ?>
     <a  href="index.php"><img src="img/banniere.jpg" height="250px" ></a>
     <?php include 'menu.php'; ?>
     
