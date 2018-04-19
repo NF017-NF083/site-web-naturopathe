@@ -16,6 +16,10 @@
     <meta name="author" content="Hazar Kaysi & Jeremy Hainselin">
     <title>L'équilibre au naturel</title>
     
+</head>
+
+<body>
+
     <!-- Code google analytics a mettre dans chaque page qu'on souhaite suivre-->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117869108-1"></script>
 <script>
@@ -25,9 +29,6 @@
 
   gtag('config', 'UA-117869108-1');
 </script>
-</head>
-
-<body>
 
     <?php include 'bouton_connexion.php'; ?>
     <a  href="index.php"><img src="img/banniere.jpg" height="250px" ></a>
