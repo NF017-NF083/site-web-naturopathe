@@ -1,3 +1,6 @@
+<?php
+    setcookie("sophrologie","display",time()+31556926);
+?>
 <!doctype html>
 <html>
 
@@ -8,18 +11,9 @@
 </head>
 
 <body>
-    <!-- Code google analytics a mettre dans chaque page qu'on souhaite suivre-->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117869108-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-117869108-1');
-</script>
     <a  href="index.php"><img src="img/banniere.jpg" height="250px" ></a>
     <?php include "menu.php"; ?>
-    
+    <?php if(!isset($_COOKIE["sophrologie"])) echo "<div id=\"bienvenue\">Bienvenue</div>"."<br>"; ?>
     <div class="presentation">
     <img src="img/sophrologie.jpg" width="300px">
     <h1>Sophrologie caycédienne</h1>

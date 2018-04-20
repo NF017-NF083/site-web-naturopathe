@@ -1,3 +1,6 @@
+<?php
+    setcookie("naturopathie2","display",time()+31556926);
+?>
 <!doctype html>
 <html>
 
@@ -10,7 +13,7 @@
 <body>
     <a  href="index.php"><img src="img/banniere.jpg" height="250px" ></a>
     <?php include "menu.php"; ?>
-    
+    <?php if(!isset($_COOKIE["naturopathie2"])) echo "<div id=\"bienvenue\">Bienvenue</div>"."<br>"; ?>
     <table>
     <tr>
     <td>Bilan de vitalité ( 2h )</td>

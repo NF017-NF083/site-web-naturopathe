@@ -1,12 +1,12 @@
 
 <footer>
     <a id="contact" href="contact.php">Contactez-moi</a>
-    <a id="mentions" href="mention_legal.php">Mentions légales</a><br>
+    <a id="mentions" href="mention_legal.php">Mentions légales</a><br>    
     <p id="concepteurs">
 <?php
 try
 {
-  $bdd = new PDO('mysql:host=lequilibiececile.mysql.db;dbname=lequilibiececile','lequilibiececile','AnkrGkkEqAmt1');;
+  $bdd = new PDO('mysql:host=localhost;dbname=naturopathie','root','');
 }
 catch(Exception $e)
 {

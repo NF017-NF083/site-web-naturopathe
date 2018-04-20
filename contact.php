@@ -1,3 +1,6 @@
+<?php
+    setcookie("contact","display",time()+31556926);
+?>
 <!doctype html>
 <html>
 
@@ -10,12 +13,12 @@
 <body>
     <a  href="index.php"><img src="img/banniere.jpg" height="250px" ></a>
     <?php include "menu.php"; ?>
-    
+    <?php if(!isset($_COOKIE["contact"])) echo "<div id=\"bienvenue\">Bienvenue</div>"."<br>"; ?>
     <div class="presentation">
     
     <h1>Contactez-moi</h1>
     
-    <form method="GET" action="message.php" name="formulaire">
+    <form method="POST" action="reception.php" name="formulaire">
     <label for "nom" >Nom et prénom</label>
     <input type="text" name="nom" autofocus required ><br>
     <label for "tel">Téléphone</label>
@@ -24,11 +27,11 @@
     <input type="email" name="mail" required><br>
     Sujet du message<br>
 
-    <input type="radio" id="demContact" name="sujet" value="demContact" checked>
+    <input type="radio" id="demContact" name="sujet" value="Demande de Contact" checked>
     <label for "demContact" style="display:inline; float:none;">Demande de contact</label><br>
-    <input type="radio" id="demInformation" name="sujet" value="demInformation">
+    <input type="radio" id="demInformation" name="sujet" value="Demande d'information">
     <label for "demInformation" style="display:inline; float:none;">Demande d'information</label><br>
-    <input type="radio" id="suggAmelioration" name="sujet" value="suggAmelioration">
+    <input type="radio" id="suggAmelioration" name="sujet" value="Suggestion d'amelioration">
     <label for "suggAmelioration" style="display:inline; float:none;">Suggestion d'amélioration</label><br>
     
     

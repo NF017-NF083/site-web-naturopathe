@@ -1,3 +1,6 @@
+<?php
+    setcookie("naturopathie1","display",time()+31556926);
+?>
 <!doctype html>
 <html>
 
@@ -10,7 +13,7 @@
 <body>
     <a  href="index.php"><img src="img/banniere.jpg" height="250px" ></a>
     <?php include "menu.php"; ?>
-    
+    <?php if(!isset($_COOKIE["naturopathie1"])) echo "<div id=\"bienvenue\">Bienvenue</div>"."<br>"; ?>
     <div class="presentation">
     
     <h1>Déroulement d'une consultation</h1>
