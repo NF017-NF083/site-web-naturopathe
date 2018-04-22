@@ -14,30 +14,29 @@
     <a href="index.php"><img src="img/banniere.jpg" height="250px" ></a>
     <?php include "menu.php"; ?>
     <?php if(!isset($_COOKIE["sophrologie2"])) echo "<div id=\"bienvenue\">Bienvenue</div>"."<br>"; ?>
-    
     <table>
+    <?php
+     try
+   {
+      $bdd = new PDO('mysql:host=localhost;dbname=naturopathie;charset=UTF8','root','');
+   }
+     catch(Exception $e)
+   {
+        die('Erreur : '.$e->getMessage());
+   }
+      $reponse = $bdd->query('SELECT prestation,prix FROM tarifs WHERE categorie="sophrologie2"');
+
+     while($donnees = $reponse->fetch(PDO::FETCH_ASSOC))
+     { ?>
     <tr>
-    <td>RDV 1ère consultation (1h30)</td>
-    <td>60 €</td>
+    <td><?php echo $donnees['prestation']; ?></td>
+    <td><?php echo $donnees['prix'].' €'; ?> </td>
     </tr>
-    
-    <tr>
-    <td>RDV de suivi (1h15)</td>
-    <td>50 €</td>
-    </tr>
-    
-    <tr>
-    <td>Cours collectifs Adultes 1 h(mercredi matin) sur la base de 3 personnes</td>
-    <td>18 €</td>
-    </tr>
-    
-    <tr>
-    <td>Cours collectifs Enfants 1h(Samedi matin) sur la base de 3 enfants</td>
-    <td>16 €</td>
-    </tr>
-    <table>
-  
-    
+ <?php 
+     }
+  $reponse->closecursor();
+    ?> 
+    </table>
     <?php include "footer.php"; ?>
 </body>
 

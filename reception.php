@@ -24,14 +24,15 @@ catch(Exception $e)
 {
         die('Erreur : '.$e->getMessage());
 }
-$req = $bdd->prepare('INSERT INTO message(exp_nom_prenom,exp_telephone,exp_mail,sujet_message,message)VALUES(?,?,?,?,?)');
+$req = $bdd->prepare('INSERT INTO message(exp_nom_prenom,exp_telephone,exp_mail,sujet_message,message,heure_reception)VALUES(?,?,?,?,?,?)');
 $nom=$_POST['nom'];$nom=spec_char($nom);
 $tel=$_POST['tel'];$tel=spec_char($tel);
 $mail=$_POST['mail'];
 $sujet=$_POST['sujet'];
 $message=$_POST['message'];$message=spec_char($message);
+$heure=date('Y-m-d G:i:s');
 
-$req->execute(array($nom,$tel,$mail,$sujet,$message));
+$req->execute(array($nom,$tel,$mail,$sujet,$message,$heure));
 
 echo 'Votre message a bien été envoyé .'.'<br>';
 ?>

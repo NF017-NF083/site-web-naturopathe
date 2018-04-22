@@ -15,26 +15,28 @@
     <?php include "menu.php"; ?>
     <?php if(!isset($_COOKIE["naturopathie2"])) echo "<div id=\"bienvenue\">Bienvenue</div>"."<br>"; ?>
     <table>
+    <?php
+     try
+   {
+      $bdd = new PDO('mysql:host=localhost;dbname=naturopathie;charset=UTF8','root','');
+   }
+     catch(Exception $e)
+   {
+        die('Erreur : '.$e->getMessage());
+   }
+      $reponse = $bdd->query('SELECT prestation,prix FROM tarifs WHERE categorie="naturopathie2"');
+
+     while($donnees = $reponse->fetch(PDO::FETCH_ASSOC))
+     { ?>
     <tr>
-    <td>Bilan de vitalité ( 2h )</td>
-    <td>70 €</td>
+    <td><?php echo $donnees['prestation']; ?></td>
+    <td><?php echo $donnees['prix'].' €'; ?> </td>
     </tr>
-    
-    <tr>
-    <td>RDV de suivi ( 1h )</td>
-    <td>40 €</td>
-    </tr>
-    
-    <tr>
-    <td>Conseil en aromathérapie et phytothérapie ( 1h )</td>
-    <td>40 €</td>
-    </tr>
-    
-    <tr>
-    <td>Conseil en nutrition et réforme alimentaire ( 2h )</td>
-    <td>65 €</td>
-    </tr>
-    <table>
+ <?php 
+     }
+  $reponse->closecursor();
+    ?> 
+    </table>
   
     
     <?php include "footer.php"; ?>

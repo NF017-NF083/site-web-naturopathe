@@ -16,11 +16,29 @@
     <?php if(!isset($_COOKIE["naturopathie1"])) echo "<div id=\"bienvenue\">Bienvenue</div>"."<br>"; ?>
     <div class="presentation">
     
-    <h1>Déroulement d'une consultation</h1>
-    <p>La consultation en naturopathie permet de dresser un bilan de votre vitalité le jour de la visite.<br>
-    La consultation se poursuit sur la proposition d'un programme d'hygiène vitale (PHV) personnalisé, 
-    adapté à votre profil et à vos antécédents de santé.
-    Ce programme contient les conseils et recommandations pour mener à bien la cure naturopathique proposée.</p>
+    <?php
+     try
+   {
+      $bdd = new PDO('mysql:host=localhost;dbname=naturopathie','root','', array (PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''));
+   }
+     catch(Exception $e)
+   {
+        die('Erreur : '.$e->getMessage());
+   }
+      $reponse = $bdd->query('SELECT titre,article,categorie FROM content WHERE categorie="naturopathie1"');
+
+     while($donnees = $reponse->fetch(PDO::FETCH_ASSOC))
+     { ?>
+      <h1><?php echo $donnees['titre'];?>
+      </h1>
+      <p><?php echo $donnees['article'];?>
+      </p>
+     
+     <?php
+     }
+     $reponse->closecursor();
+     
+    ?>
     </div>
     
     

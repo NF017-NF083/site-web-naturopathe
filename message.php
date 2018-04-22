@@ -24,7 +24,7 @@ catch(Exception $e)
 }
 $req = $bdd->query('SELECT * FROM message');
 while ($donnees = $req->fetch()){
-  $export[] = array($donnees["exp_nom_prenom"],$donnees["exp_telephone"],$donnees["exp_mail"],$donnees["sujet_message"],$donnees["message"]);
+  $export[] = array($donnees["exp_nom_prenom"],$donnees["exp_telephone"],$donnees["exp_mail"],$donnees["sujet_message"],$donnees["message"],$donnees["heure_reception"]);
   ?>
   
   <div id="messages">
@@ -33,11 +33,12 @@ while ($donnees = $req->fetch()){
   <p><strong>E-mail :</strong><?php echo $donnees["exp_mail"]; ?></p>
   <p><strong>Sujet :</strong><?php echo $donnees["sujet_message"]; ?></p>
   <p><strong>Message :</strong><?php echo $donnees["message"]; ?></p>
+  <p><strong>Heure et date de réception :</strong><?php echo $donnees["heure_reception"]; ?></p>
   </div>
 <?php
 }
 $output = fopen('messages.csv','w');
-$entetes = array('Nom et prenom', 'Telephone', 'E-mail', 'Sujet', 'Message');
+$entetes = array('Nom et prenom', 'Telephone', 'E-mail', 'Sujet', 'Message','Heure');
 fputcsv($output, $entetes, ';');
 foreach($export as $ligneaexporter){
         fputcsv($output, $ligneaexporter, ';');
