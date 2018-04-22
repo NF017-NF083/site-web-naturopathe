@@ -11,7 +11,6 @@
     
     <!--Balise pour google search console pour prouver que c'est bien nous-->
     <meta name="google-site-verification" content="HC5GwfmBaMajleBORG-x9pdlVGcECmiELkKiKyBROBA" />
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
      <title>L'équilibre au naturel</title>
     
     <!-- Code google analytics a mettre dans chaque page qu'on souhaite suivre-->
