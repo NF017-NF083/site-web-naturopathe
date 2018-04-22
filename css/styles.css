@@ -2,34 +2,30 @@ body {
   font-family: "GeosansLight", Times, serif;
   background-color:#fcf5de;
   text-align:center ;
-  
 }
-
 a{
   text-decoration:none;
-  font-size : 30px;
-  display: block;
+  display: inline-block;
   color:#593a0f;
- 
+  margin-left :4px ;
 }
 .contact{
   font-size : 30px;
   color:#593a0f;
   text-decoration:underline;
-  display:inline;
 }
-
 a:hover {
    text-decoration: underline;
 }
-nav , footer {
+nav {
+  font-size : 30px;
   display:flex;
   height: 100px;
   justify-content: space-around;
   flex-direction: row;
 }
 .presentation {
-  width: 600px ;
+  width : 800px ;
   margin:auto ;
   line-height: 1.8;
   font-size: 1.5em ;
@@ -48,36 +44,91 @@ table{
   width: 600px ;
   border : 2px solid #baa26f ;
   border-radius : 10px ;
-
+  height:70px;
+  background-color:white ;
+  font-size:40px ;
 }
 
 span {
   font-weight:bold ;
 }
-form {
+form[name="formulaire"] {
   text-align:left ;
 }
-label
-{
-	display: block; 
-	width: 150px;
-  float:left ;
+
+form[name="formulaire"] label {
+    display: block;
+    width: 30%;
+    float:left ;
 }
-input[type=submit]{
+
+input[type=submit],input[type=reset],.liens{
+  
   background-color:white ;
-  display: block;
+  margin:30px;
   font-size:1.1em;
   border : 3px solid #baa26f ;
   border-radius : 5px ;
-  margin:auto ;
+  padding:3px ;  
 }
-
+.boutons{
+  text-align:center ;
+}
+#contact , #mentions {
+  display:inline-block;
+  margin:10px 90px ;
+}
 footer {
-  margin-top:30px;
-  background-color:#fcf5ea;
-  padding-top:20px;
+  background-color:#d6d5d4;
+  color:#593a0f;
+  padding:2px;
+  font-size : 20px ;
+}
+/*boutons de connexion et de déconnexion et de retour*/
+#connexion, #deconnexion,#retour{
+  display:block ;
+  position:absolute ;
+  right:5px ;
+  background-color:white ;
+  padding:3px ;
+  font-size:1.1em;
+  border : 3px solid #baa26f ;
+  border-radius : 5px ;
+}
+/* Le login à coté du bouton déconnexion */
+#login {
+  display:block ;
+  position:absolute ;
+  right:10px ;
+  font-size:1.1em;
+}
+#bienvenue{
+  font-size : 30px;
   
 }
+#messages{
+  margin-bottom:20px ;
+  padding-left:10px ;
+  background-color:white ;
+  border : 2px solid #baa26f ;
+  text-align:left ;
+}
+.modif{
+  display:flex;
+ 
+}
+.articlemodif:first-child{
+  width:50%;
+  background-color:white ;
+  border : 2px solid #baa26f ;
+  text-align:left ;
+}
+.articlemodif:not(:first-child){
+  flex:1;
+   background-color:white ;
+  border : 2px solid #baa26f ;
+}
+
 @font-face {
     font-family: "GeosansLight";
     src: url(GeosansLight.ttf);
