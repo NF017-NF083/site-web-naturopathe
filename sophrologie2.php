@@ -18,7 +18,7 @@
     <?php
      try
    {
-      $bdd = new PDO('mysql:host=localhost;dbname=naturopathie;charset=UTF8','root','');
+      $bdd = new PDO('mysql:host=lequilibiececile.mysql.db;dbname=lequilibiececile;charset=UTF8','lequilibiececile','AnkrGkkEqAmt1');
    }
      catch(Exception $e)
    {

@@ -12,7 +12,7 @@
    <?php
      try
    {
-      $bdd = new PDO('mysql:host=localhost;dbname=naturopathie','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+      $bdd = new PDO('mysql:host=lequilibiececile.mysql.db;dbname=lequilibiececile;charset=UTF8','lequilibiececile','AnkrGkkEqAmt1');
    }
      catch(Exception $e)
    {

@@ -16,7 +16,7 @@ session_start();
       <?php
      try
    {
-      $bdd = new PDO('mysql:host=localhost;dbname=naturopathie','root','', array (PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''));
+      $bdd = new PDO('mysql:host=lequilibiececile.mysql.db;dbname=lequilibiececile;charset=UTF8','lequilibiececile','AnkrGkkEqAmt1');
    }
      catch(Exception $e)
    {
