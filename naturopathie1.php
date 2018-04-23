@@ -31,7 +31,7 @@
      { ?>
       <h1><?php echo $donnees['titre'];?>
       </h1>
-      <p><?php echo $donnees['article'];?>
+      <p><?php echo nl2br($donnees['article']);?>
       </p>
      
      <?php
