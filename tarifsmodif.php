@@ -74,14 +74,7 @@ session_start();
    
    
     <?php
-    try
-   {
-      $bdd = new PDO('mysql:host=lequilibiececile.mysql.db;dbname=lequilibiececile;charset=UTF8','lequilibiececile','AnkrGkkEqAmt1');
-   }
-     catch(Exception $e)
-   {
-        die('Erreur : '.$e->getMessage());
-   }
+
     if((isset($_POST['submit'])) AND (isset($_GET['id']))){
       
         $req = $bdd->prepare('UPDATE tarifs SET prestation=?,prix=? WHERE ID=?');
