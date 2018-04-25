@@ -16,7 +16,7 @@
     <?php if(!isset($_COOKIE["naturopathie"])) echo "<div id=\"bienvenue\">Bienvenue</div>"."<br>"; ?>
     
     <div class="presentation">
-    <img src="img/naturopathie.jpg" width="300px">
+    <img src="img/naturopathie.jpg" alt="Naturopathie" width="300px">
     <?php
      try
    {

@@ -41,7 +41,7 @@
     <?php if(!isset($_COOKIE["index"])) echo "<div id=\"bienvenue\">Bienvenue</div>"."<br>";?>  
     
     <div class="presentation">
-    <img src="img/photo.jpg">
+    <img src="img/photo.jpg" alt="Cécile Gragirena naturopathe">
     <?php
      try
    {

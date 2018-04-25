@@ -26,7 +26,7 @@
     <?php if(!isset($_COOKIE["sophrologie"])) echo "<div id=\"bienvenue\">Bienvenue</div>"."<br>"; ?>
     
     <div class="presentation">
-    <img src="img/sophrologie.jpg" width="300px">
+    <img src="img/sophrologie.jpg" alt="Sophrologie" width="300px">
     <?php
      try
    {
