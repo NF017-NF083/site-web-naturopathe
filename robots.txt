@@ -1,8 +1,8 @@
 User-agent: *
 #bloque les fichiers suivant
-Disallow: /js/
+Disallow: /css/
 Disallow: /bdd/
-Disallow: /back_office/
+Disallow: /admin/
 Disallow: /connexion.php
 Disallow: /mentions_legales.php
-Sitemap: adresse du site/sitemap.xml
+Sitemap: www.lequilibreaunaturel.fr/sitemap.xml
