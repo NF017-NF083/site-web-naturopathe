@@ -7,7 +7,9 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
-    <title>L'équilibre au naturel</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Contact</title>
 </head>
 
 <body>
@@ -54,7 +56,18 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2675.6171755815485!2d1.8665395153693098!3d47.88573867664679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e4e569c89f5ea5%3A0xe083fe6d12a272f5!2s30+Rue+Neuve%2C+45750+Saint-Pryv%C3%A9-Saint-Mesmin!5e0!3m2!1sen!2sfr!4v1523088488765" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
     </div>
-    
+    <!-- Script pour facebook like box -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-page" data-href="https://www.facebook.com/cecilegragirena/" data-tabs="timeline" data-height="100" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/cecilegragirena/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/cecilegragirena/">Léquilibreaunaturel</a></blockquote></div>
+    <br>
+    <a href="http://www.nosnaturopathes.com">Trouvez les meilleurs naturopathes avec les avis clients sur NosNaturopathes.com</a>
     <?php include "footer.php"; ?>
 </body>
 

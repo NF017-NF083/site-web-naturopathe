@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
         <title>Connexion au BackOffice</title>
 
     </head>

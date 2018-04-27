@@ -5,4 +5,4 @@ Disallow: /bdd/
 Disallow: /admin/
 Disallow: /connexion.php
 Disallow: /mentions_legales.php
-Sitemap: www.lequilibreaunaturel.fr/sitemap.xml
+Sitemap: http://www.lequilibreaunaturel.fr/sitemap.xml
