@@ -13,7 +13,7 @@
      
     <!--Balise pour google search console pour prouver que c'est bien nous-->
     <meta name="google-site-verification" content="HC5GwfmBaMajleBORG-x9pdlVGcECmiELkKiKyBROBA" />
-     <title>L'équilibre au naturel - Cécile Gragirena </title>
+     <title>L'équilibre au naturel-Cécile Gragirena naturopathe sophrologue Orléans et Saint Pryvé Saint Mesmin(45)</title>
     
     <!-- Code google analytics a mettre dans chaque page qu'on souhaite suivre-->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117869108-1"></script>
