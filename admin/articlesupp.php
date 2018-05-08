@@ -1,7 +1,11 @@
+
 <?php
 session_start();
+if (empty($_SESSION['login'])){
+  header('Location: ../connexion.php');
+  exit();
+}
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
