@@ -25,6 +25,7 @@ nav {
   flex-direction: row;
 }
 .presentation {
+  text-align:left ;
   width : 800px ;
   margin:auto ;
   line-height: 1.8;
@@ -32,6 +33,13 @@ nav {
   background-color:#fcf5ea;
   border-radius:20px;
   padding:30px;
+}
+h1{
+  text-align:center ;
+}
+img {
+  display:block ;
+  margin:  auto ;
 }
 table{
   font-size: 1.5em ;
