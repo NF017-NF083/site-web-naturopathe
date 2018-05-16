@@ -7,7 +7,7 @@
 include "conn_bdd.php" ;
 echo 'Site conçu par  ';
 
-$reponse = $bdd->query('SELECT * FROM user WHERE nom=\'Kaysi\' OR nom=\'Hainselin\' ');
+$reponse = $bdd->query('SELECT prenom,nom FROM user WHERE prenom<>"Philippe" ');
 
 while ($donnees = $reponse->fetch())
 {

@@ -11,7 +11,9 @@ function spec_char($texte){
   if (preg_match("#[{}%]+#",$texte))
     {
     $texte = preg_replace('#[{}%]+#', '', $texte);
-    echo 'Les caractères non souhaités  { } %  ont été supprimés de votre message'.'<br>';
+    ?>
+    <p>Les caractères non souhaités  { } %  ont été supprimés de votre message</p><br>
+    <?php
     }
   return $texte ;
 }
@@ -26,7 +28,16 @@ $message=$_POST['message'];$message=spec_char($message);
 $heure=date('Y-m-d G:i:s');
 
 $req->execute(array($nom,$tel,$mail,$sujet,$message,$heure));
-
-echo 'Votre message a bien été envoyé .'.'<br>';
 ?>
+<div class="presentation">
+<p>Les informations suivantes ont été envoyées :</p>
+<p>Nom et prénom :<?php echo $nom ?></p>
+<p>Téléphone :<?php echo $tel ?></p>
+<p>E-mail :<?php echo $mail ?></p>
+<p>Sujet du message :<?php echo $sujet ?></p>
+<p>Message :<?php echo $message ?></p>
+<p>Date et heure d'envoi :<?php echo $heure ?></p>
+</div>
 <a class="liens" href="contact.php">Retourner</a>
+</body>
+</html>
