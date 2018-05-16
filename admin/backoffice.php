@@ -6,7 +6,7 @@ if (empty($_SESSION['login'])){
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="../css/styles.css">
@@ -21,15 +21,8 @@ if (empty($_SESSION['login'])){
         <a class="liens" href="message.php">Consulter mes messages</a>
         <h2>Mes articles</h2>
     <?php
-     try
-   {
-      $bdd = new PDO('mysql:host=lequilibiececile.mysql.db;dbname=lequilibiececile;charset=UTF8','lequilibiececile','AnkrGkkEqAmt1');
-   }
-     catch(Exception $e)
-   {
-        die('Erreur : '.$e->getMessage());
-   }
-      $reponse = $bdd->query('SELECT * FROM content');
+     include "../conn_bdd.php" ;
+      $reponse = $bdd->query('SELECT ID,titre,article,categorie,date_derniere_mod,mod_par_admin FROM content');
 
      while($donnees = $reponse->fetch(PDO::FETCH_ASSOC))
      { 
@@ -65,7 +58,7 @@ if (empty($_SESSION['login'])){
         <h2>Mes tarifs</h2>
         
         <?php 
-        $reponse = $bdd->query('SELECT * FROM tarifs');
+        $reponse = $bdd->query('SELECT ID,prestation,prix,categorie FROM tarifs');
 
      while($donnees = $reponse->fetch(PDO::FETCH_ASSOC))
      { 

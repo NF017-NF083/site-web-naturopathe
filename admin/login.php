@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <title>BackOffice de mon site</title>
@@ -10,14 +10,7 @@
     <body>
     
    <?php
-     try
-   {
-      $bdd = new PDO('mysql:host=lequilibiececile.mysql.db;dbname=lequilibiececile;charset=UTF8','lequilibiececile','AnkrGkkEqAmt1');
-   }
-     catch(Exception $e)
-   {
-        die('Erreur : '.$e->getMessage());
-   }
+     include "../conn_bdd.php" ;
       
       $reponse = $bdd->prepare('SELECT * FROM user WHERE login=? AND mdp= ?');
       $reponse->execute(array($_POST['login'], $_POST['mdp']));
@@ -29,8 +22,12 @@
          header('Location:backoffice.php');
      }
      else  {
-         echo 'Compte non reconnu'.'<a class="liens" href="../connexion.php">Retourner à la page de connexion </a>';
-         
+     ?>
+     
+     <p>Compte non reconnu</p>
+     <a class="liens" href="../connexion.php">Retourner à la page de connexion </a>
+     
+     <?php  
            }
      $reponse->closecursor();
      

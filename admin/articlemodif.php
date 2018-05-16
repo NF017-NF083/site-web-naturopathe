@@ -6,7 +6,7 @@ if (empty($_SESSION['login'])){
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="../css/styles.css">
@@ -18,18 +18,11 @@ if (empty($_SESSION['login'])){
     <p id="login"><?php if (isset($_SESSION['login']))echo $_SESSION['login']; ?></p>
       <h1>Gestion des articles</h1>
       <?php
-     try
-   {
-      $bdd = new PDO('mysql:host=lequilibiececile.mysql.db;dbname=lequilibiececile;charset=UTF8','lequilibiececile','AnkrGkkEqAmt1');
-   }
-     catch(Exception $e)
-   {
-        die('Erreur : '.$e->getMessage());
-   }
+     include "../conn_bdd.php" ;
    // modification d'un article
    if(isset($_GET['id']))
    {
-      $reponse = $bdd->prepare('SELECT * FROM content WHERE ID=:id');
+      $reponse = $bdd->prepare('SELECT ID,titre,article,categorie FROM content WHERE ID=:id');
       $reponse -> execute(array('id' => $_GET['id']));
 
      if($donnees = $reponse->fetch(PDO::FETCH_ASSOC))
@@ -42,7 +35,7 @@ if (empty($_SESSION['login'])){
     <label for "article">Article</label>
     <textarea name="article" rows=50 cols=100 ><?php echo $donnees["article"];?></textarea><br>
     <div class="boutons">
-    <input type="submit" name="submit" value="Modifier">
+    <input type="submit" name="submit" value="Modifier" />
     </div>
     </form>
     </div>
@@ -70,7 +63,7 @@ if (empty($_SESSION['login'])){
     <label for "article">Article</label>
     <textarea name="article" rows=50 cols=100 ></textarea><br>
     <div class="boutons">
-    <input type="submit" name="submit" value="Ajouter">
+    <input type="submit" name="submit" value="Ajouter"/>
     </div>
     </form>
     </div>
@@ -90,7 +83,11 @@ if (empty($_SESSION['login'])){
         $admin=$_SESSION['login'];
         $ID=$_GET['id'];
         $req->execute(array($titre,$article,$date,$admin,$ID));
-            echo 'Article modifié';
+        ?>
+        
+        <p>Article modifié </p>
+        
+        <?php
         $req->closecursor();
     }
     elseif ((isset($_POST['submit'])) AND (!isset($_GET['id'])))
@@ -102,11 +99,14 @@ if (empty($_SESSION['login'])){
     $date=date('Y-m-d G:i:s');
     $admin=$_SESSION['login'];
     $req->execute(array($titre,$article,$categorie,$date,$admin));
-      echo 'Article ajouté';
+    ?>
+    
+    <p>Article ajouté </p>
+    
+    <?php
     }
     
 ?>
-    
         <a class="liens" href="backoffice.php">Retour au backoffice</a>
     </body>
 </html>

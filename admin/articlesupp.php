@@ -7,7 +7,7 @@ if (empty($_SESSION['login'])){
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="../css/styles.css">
@@ -18,22 +18,19 @@ if (empty($_SESSION['login'])){
    <a href="logout.php" id="deconnexion">Déconnexion</a><br>
     <p id="login"><?php if (isset($_SESSION['login']))echo $_SESSION['login']; ?></p>
       <?php
-     try
-   {
-      $bdd = new PDO('mysql:host=lequilibiececile.mysql.db;dbname=lequilibiececile;charset=UTF8','lequilibiececile','AnkrGkkEqAmt1');
-   }
-     catch(Exception $e)
-   {
-        die('Erreur : '.$e->getMessage());
-   }
+     include "../conn_bdd.php" ;
 
    if(isset($_GET['id'])){
      $reponse = $bdd->prepare('DELETE FROM content WHERE ID=:id');
      $reponse -> execute(array('id' => $_GET['id']));
-     echo "L'article a été supprimé ";
+     ?>
      
+     <p>L'article a été supprimé </p>
+     
+     <?php
    }
    ?>
+   
    <a class="liens" href="backoffice.php">Retour au backoffice</a>
     </body>
 </html>

@@ -7,8 +7,8 @@ if (empty($_SESSION['login'])){
 ?>
 
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="fr">    
+<head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="../css/styles.css">
         <title>Gestion des tarifs</title>
@@ -19,18 +19,11 @@ if (empty($_SESSION['login'])){
     <p id="login"><?php if (isset($_SESSION['login']))echo $_SESSION['login']; ?></p>
       <h1>Gestion des tarifs</h1>
       <?php
-     try
-   {
-      $bdd = new PDO('mysql:host=lequilibiececile.mysql.db;dbname=lequilibiececile;charset=UTF8','lequilibiececile','AnkrGkkEqAmt1');
-   }
-     catch(Exception $e)
-   {
-        die('Erreur : '.$e->getMessage());
-   }
+     include "../conn_bdd.php" ;
    // modification d'un article
    if(isset($_GET['id']))
    {
-      $reponse = $bdd->prepare('SELECT * FROM tarifs WHERE ID=:id');
+      $reponse = $bdd->prepare('SELECT ID,categorie,prestation,prix FROM tarifs WHERE ID=:id');
       $reponse -> execute(array('id' => $_GET['id']));
 
      if($donnees = $reponse->fetch(PDO::FETCH_ASSOC))
@@ -43,7 +36,7 @@ if (empty($_SESSION['login'])){
     <label for "prix">Prix</label>
     <textarea name="prix"  ><?php echo $donnees["prix"];?></textarea><br>
     <div class="boutons">
-    <input type="submit" name="submit" value="Modifier">
+    <input type="submit" name="submit" value="Modifier" />
     </div>
     </form>
     </div>
@@ -68,7 +61,7 @@ if (empty($_SESSION['login'])){
     <label for "prix">Prix</label>
     <textarea name="prix"  ></textarea><br>
     <div class="boutons">
-    <input type="submit" name="submit" value="Ajouter">
+    <input type="submit" name="submit" value="Ajouter" />
     </div>
     </form>
     </div>
@@ -86,7 +79,10 @@ if (empty($_SESSION['login'])){
         $prix=$_POST['prix'];
         $ID=$_GET['id'];
         $req->execute(array($prestation,$prix,$ID));
-            echo 'Prestation modifiée';
+        ?>
+        <p>Prestation modifiée </p>
+        
+        <?php
         $req->closecursor();
     }
     elseif ((isset($_POST['submit'])) AND (!isset($_GET['id'])))
@@ -97,9 +93,10 @@ if (empty($_SESSION['login'])){
     $categorie=$_POST['categorie'];
     
     $req->execute(array($prestation,$prix,$categorie));
-      echo 'Prestation ajoutée';
+    ?>
+    <p>Prestation ajoutée</p>
+    <?php
     }
-    
 ?>
     
         <a class="liens" href="backoffice.php">Retour au backoffice</a>

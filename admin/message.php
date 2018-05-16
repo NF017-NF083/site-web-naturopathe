@@ -7,7 +7,7 @@ if (empty($_SESSION['login'])){
 ?>
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <title>Mes messages</title>
@@ -18,15 +18,8 @@ if (empty($_SESSION['login'])){
     <p id="login"><?php if (isset($_SESSION['login']))echo $_SESSION['login']; ?></p>
     <h2>Mes messages</h2>
 <?php
-try
-{
-	$bdd = new PDO('mysql:host=lequilibiececile.mysql.db;dbname=lequilibiececile;charset=UTF8','lequilibiececile','AnkrGkkEqAmt1');
-}
-catch(Exception $e)
-{
-        die('Erreur : '.$e->getMessage());
-}
-$req = $bdd->query('SELECT * FROM message');
+include "../conn_bdd.php" ;
+$req = $bdd->query('SELECT exp_nom_prenom,exp_telephone,exp_mail,sujet_message,message,heure_reception FROM message');
 while ($donnees = $req->fetch()){
   $export[] = array($donnees["exp_nom_prenom"],$donnees["exp_telephone"],$donnees["exp_mail"],$donnees["sujet_message"],$donnees["message"],$donnees["heure_reception"]);
   ?>
