@@ -2,7 +2,7 @@
     setcookie("sophrologie","display",time()+31556926);
 ?>
 <!doctype html>
-<html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -10,6 +10,8 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>L'équilibre au naturel - La Sophrologie</title>
+    <meta name="Description" content="Cécile Gragirena propose des scéances de sophrologie afin de mieux gérer son stress et prendre confiance en soi."/>
+
         <!-- Code google analytics a mettre dans chaque page qu'on souhaite suivre-->
        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117869108-1"></script>
        <script>
@@ -23,21 +25,15 @@
 
 <body>
 
-    <a  href="index.php"><img src="img/banniere.jpg" height="250px" ></a>
+    <a  href="index.php"><img src="img/banniere.jpg" alt="L'équilibre au naturel" height="250px" ></a>
     <?php include "menu.php"; ?>
     <?php if(!isset($_COOKIE["sophrologie"])) echo "<div id=\"bienvenue\">Bienvenue</div>"."<br>"; ?>
     
-    <div class="presentation">
+    <article class="presentation">
     <img src="img/sophrologie.jpg" alt="Sophrologie" width="300px">
     <?php
-     try
-   {
-      $bdd = new PDO('mysql:host=lequilibiececile.mysql.db;dbname=lequilibiececile;charset=UTF8','lequilibiececile','AnkrGkkEqAmt1');
-   }
-     catch(Exception $e)
-   {
-        die('Erreur : '.$e->getMessage());
-   }
+    include "conn_bdd.php" ;
+    
       $reponse = $bdd->query('SELECT titre,article,categorie FROM content WHERE categorie="sophrologie"');
 
      while($donnees = $reponse->fetch(PDO::FETCH_ASSOC))
@@ -52,7 +48,7 @@
      $reponse->closecursor();
      
     ?>
-    </div>
+    </article>
     
     <div class="categories">
     <div class="cat"><a  href="sophrologie1.php" >Scéances de sophologie</a></div>

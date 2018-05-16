@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <title>Envoi message</title>
@@ -16,14 +15,8 @@ function spec_char($texte){
     }
   return $texte ;
 }
-try
-{
-	$bdd = new PDO('mysql:host=lequilibiececile.mysql.db;dbname=lequilibiececile;charset=UTF8','lequilibiececile','AnkrGkkEqAmt1');
-}
-catch(Exception $e)
-{
-        die('Erreur : '.$e->getMessage());
-}
+include "conn_bdd.php" ;
+
 $req = $bdd->prepare('INSERT INTO message(exp_nom_prenom,exp_telephone,exp_mail,sujet_message,message,heure_reception)VALUES(?,?,?,?,?,?)');
 $nom=$_POST['nom'];$nom=spec_char($nom);
 $tel=$_POST['tel'];$tel=spec_char($tel);

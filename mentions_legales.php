@@ -1,6 +1,5 @@
 <!doctype html>
-<html>
-
+<html lang="fr">
 <head>
      <meta charset="utf-8">
      <link rel="stylesheet" href="css/styles.css">
@@ -12,7 +11,7 @@
  </head>
 
 <body>
-    <a  href="index.php"><img src="img/banniere.jpg" height="250px" ></a>
+    <a  href="index.php"><img src="img/banniere.jpg" alt="L'équilibre au naturel" height="250px" ></a>
     <?php include "menu.php"; ?>
  
 <p style="text-align:center">MENTIONS LEGALES :</p>
