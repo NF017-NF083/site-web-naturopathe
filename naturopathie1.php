@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>L'équilibre au naturel - La naturopathie</title>
+    <meta name="Description" content="Cécile Gragirena propose de vous apprendre à gérer vous même votre santé en expliquant comment se déroulera la consulatation.">
 </head>
 
 <body>

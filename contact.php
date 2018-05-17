@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>Contact</title>
+    <meta name="Description" content="Cécile Gragirena vous accompagne si vous souhaitez rentrer en contact avec elle, c'est ici que cela se passe!!">
 </head>
 
 <body>

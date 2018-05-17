@@ -7,7 +7,7 @@
      <link rel="icon" href="img/favicon.ico" type="image/x-icon">
      
      <title>L'équilibre au naturel- mentions légales</title>
-    
+     <meta name="Description" content="Vous trouverez ici les mentions légales concernant le site de Cécile Gragirena">
  </head>
 
 <body>
