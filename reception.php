@@ -2,6 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
+        <meta name="description" content="Ici se trouve les informations que vous avez envoyées sur notre site l'equilibre au naturel"
         <title>Envoi message</title>
         <link rel="stylesheet" href="css/styles.css">
     </head>

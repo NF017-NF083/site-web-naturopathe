@@ -5,6 +5,7 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
+    <meta name="Description" content="Cécile Gragirena propose des scéances de sophrologie au tarif suivant."/>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">

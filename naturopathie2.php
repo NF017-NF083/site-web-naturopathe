@@ -5,6 +5,7 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
+    <meta name="description" content="Cécile Gragirena vous détails ici les différents prix qu'elle pratique"
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
