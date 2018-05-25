@@ -26,10 +26,10 @@
      while($donnees = $reponse->fetch(PDO::FETCH_ASSOC))
      { ?>
                 <h1>
-                    <?php echo htmlspecialchars($donnees['titre']);?>
+                    <?php echo ($donnees['titre']);?>
                 </h1>
                 <p>
-                    <?php echo nl2br(htmlspecialchars($donnees['article']));?>
+                    <?php echo nl2br($donnees['article']);?>
                 </p>
 
                 <?php
