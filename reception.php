@@ -21,11 +21,11 @@ function spec_char($texte){
 include "conn_bdd.php" ;
 
 $req = $bdd->prepare('INSERT INTO message(exp_nom_prenom,exp_telephone,exp_mail,sujet_message,message,heure_reception)VALUES(?,?,?,?,?,?)');
-$nom=$_POST['nom'];$nom=spec_char($nom);
-$tel=$_POST['tel'];$tel=spec_char($tel);
-$mail=$_POST['mail'];
+$nom=$_POST['nom'];$nom=htmlspecialchars(spec_char($nom));
+$tel=$_POST['tel'];$tel=htmlspecialchars(spec_char($tel));
+$mail=htmlspecialchars($_POST['mail']);
 $sujet=$_POST['sujet'];
-$message=$_POST['message'];$message=spec_char($message);
+$message=$_POST['message'];$message=htmlspecialchars(spec_char($message));
 $heure=date('Y-m-d G:i:s');
 
 $req->execute(array($nom,$tel,$mail,$sujet,$message,$heure));

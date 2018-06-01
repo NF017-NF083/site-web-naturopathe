@@ -22,7 +22,7 @@
     
     <form method="POST" action="reception.php" name="formulaire">
     <label for "nom" >Nom et prénom</label>
-    <input type="text" name="nom" autofocus required /><br>
+    <input type="text" name="nom" maxlength="20" autofocus required /><br>
     <label for "tel">Téléphone</label>
     <input type="tel" name="tel"/><br>
     <label for "mail">E-mail</label>
@@ -38,7 +38,7 @@
     
     
     <label for "message">Votre message</label>
-    <textarea name="message" rows=10 cols=50 required></textarea><br>
+    <textarea name="message" rows=10 cols=50 maxlength="200" required></textarea><br>
     
     <div class="boutons">
     <input type="submit" name="send" value="Envoyer" />
