@@ -77,8 +77,8 @@ if (empty($_SESSION['login'])){
     if((isset($_POST['submit'])) AND (isset($_GET['id']))){
       
         $req = $bdd->prepare('UPDATE content SET titre=?,article=?,date_derniere_mod=?,mod_par_admin=? WHERE ID=?');
-        $titre=$_POST['titre'];
-        $article=$_POST['article'];
+        $titre=strip_tags($_POST['titre'],"<strong>");
+        $article=strip_tags($_POST['article'],"<strong>");
         $date=date('Y-m-d G:i:s');
         $admin=$_SESSION['login'];
         $ID=$_GET['id'];
@@ -93,8 +93,8 @@ if (empty($_SESSION['login'])){
     elseif ((isset($_POST['submit'])) AND (!isset($_GET['id'])))
     {
     $req = $bdd->prepare('INSERT INTO content(titre,article,categorie,date_derniere_mod,mod_par_admin) VALUES(?,?,?,?,?)');
-    $titre=$_POST['titre'];
-    $article=$_POST['article'];
+    $titre=strip_tags($_POST['titre'],"<strong>");
+    $article=strip_tags($_POST['article'],"<strong>");
     $categorie=$_POST['categorie'];
     $date=date('Y-m-d G:i:s');
     $admin=$_SESSION['login'];
